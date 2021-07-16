@@ -82,10 +82,14 @@ body {
 .btn.toggle-btn {
   border-width: 1px;
   border-color: #d3d3d3;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .btn.toggle-btn[aria-pressed="true"] {
   text-decoration: underline;
   border-color: #4d4d4d;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .btn__danger {
   color: #fff;

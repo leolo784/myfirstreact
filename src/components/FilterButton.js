@@ -1,8 +1,9 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 
 function FilterButton(props) {
     return (
-    <button
+    <Button variant="contained" color="primary"
         type="button"
         className="btn toggle-btn"
         aria-pressed={props.isPressed}
@@ -11,7 +12,7 @@ function FilterButton(props) {
         <span className="visually-hidden">Show </span>
         <span>{props.name}</span>
         <span className="visually-hidden"> tasks</span>
-    </button>
+    </Button>
     );
 }
 
