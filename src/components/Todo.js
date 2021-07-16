@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Checkbox from '@material-ui/core/Checkbox';
 
 export default function Todo(props) {
     const [isEditing, setEditing] = useState(false);
@@ -38,11 +39,11 @@ export default function Todo(props) {
     const viewTemplate = (
         <div className="stack-small">
         <div className="c-cb">
-            <input
+            <Checkbox
                 id={props.id}
-                type="checkbox"
-                defaultChecked={props.completed}
+                checked={props.completed}
                 onChange={() => props.toggleTaskCompleted(props.id)}
+                size = "medium"
             />
             <label className="todo-label" htmlFor={props.id}>
                 {props.name}

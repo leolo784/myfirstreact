@@ -4,6 +4,7 @@ import FilterButton from "./components/FilterButton";
 import React, { useState } from "react";
 import {nanoid} from "nanoid"
 import MenuBar from './MenuBar'
+import Divider from '@material-ui/core/Divider';
 
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
@@ -81,21 +82,26 @@ function App(props) {
       <h1>
         <MenuBar />
       </h1>
-      <h1>TodoMatic</h1>
-      <Form addTask={addTask}/>
-      <div className="filters btn-group stack-exception">
-        {filterList}
+      <div className = "content-container">
+        <h1>TodoMatic</h1>
+        <Divider />
+        <div className = "content">
+          <Form addTask={addTask}/>
+          <div className="filters btn-group stack-exception">
+            {filterList}
+          </div>
+          <h2 id="list-heading">
+            {headingText}
+          </h2>
+          <ul
+            role="list"
+            className="todo-list stack-large stack-exception"
+            aria-labelledby="list-heading"
+          >
+            {taskList}
+          </ul>
+          </div>
       </div>
-      <h2 id="list-heading">
-        {headingText}
-      </h2>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
-        {taskList}
-      </ul>
     </div>
   );
 }
