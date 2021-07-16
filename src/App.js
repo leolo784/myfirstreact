@@ -3,6 +3,7 @@ import Form from './components/Form';
 import FilterButton from "./components/FilterButton";
 import React, { useState } from "react";
 import {nanoid} from "nanoid"
+import MenuBar from './MenuBar'
 
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
@@ -77,6 +78,9 @@ function App(props) {
   
   return (
     <div className="todoapp stack-large">
+      <h1>
+        <MenuBar />
+      </h1>
       <h1>TodoMatic</h1>
       <Form addTask={addTask}/>
       <div className="filters btn-group stack-exception">
