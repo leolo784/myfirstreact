@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Sidebar} from './components/sidebar'; 
 
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true},
@@ -12,7 +13,8 @@ const DATA = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <App tasks={DATA}/>
+    <Sidebar />
+    {/* <App tasks={DATA}/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
